@@ -1,0 +1,10 @@
+name = "Project Wonderland Framework";
+picture = "Wonderland_Core/Data/Wonderland_Logo.edds";
+logo = "Wonderland_Core/Data/Wonderland_Logo.edds";
+logoSmall = "Wonderland_Core/Data/Wonderland_Logo_Small.edds";
+tooltip = "Project Wonderland Framework";
+tooltipOwned = "Project Wonderland Framework Owned";
+action = "";
+author = "Project Wonderland Development Team";
+version = "0.1.0";
+overview = "A modular survival framework for DayZ built around the Wonderland universe.";

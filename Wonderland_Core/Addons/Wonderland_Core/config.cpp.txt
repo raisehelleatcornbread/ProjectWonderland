@@ -1,0 +1,70 @@
+class CfgPatches
+{
+    class Wonderland_Core
+    {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = 0.1;
+        requiredAddons[] =
+        {
+            "DZ_Data"
+        };
+    };
+};
+
+class CfgMods
+{
+    class Wonderland_Core
+    {
+        dir = "Wonderland_Core";
+        picture = "";
+        action = "";
+        hideName = 1;
+        hidePicture = 1;
+
+        name = "Project Wonderland Framework";
+        credits = "Project Wonderland";
+        author = "Project Wonderland";
+
+        version = "0.1.0";
+        type = "mod";
+
+        dependencies[] =
+        {
+            "Core",
+            "Game",
+            "World",
+            "Mission"
+        };
+
+        class defs
+        {
+            class gameScriptModule
+            {
+                value = "";
+                files[] =
+                {
+                    "Wonderland_Core/Scripts/3_Game"
+                };
+            };
+
+            class worldScriptModule
+            {
+                value = "";
+                files[] =
+                {
+                    "Wonderland_Core/Scripts/4_World"
+                };
+            };
+
+            class missionScriptModule
+            {
+                value = "";
+                files[] =
+                {
+                    "Wonderland_Core/Scripts/5_Mission"
+                };
+            };
+        };
+    };
+};
