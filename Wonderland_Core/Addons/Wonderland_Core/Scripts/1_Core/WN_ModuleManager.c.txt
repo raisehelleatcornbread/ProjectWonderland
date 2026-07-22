@@ -1,0 +1,121 @@
+/**
+ * -------------------------------------------------------
+ * Project Wonderland
+ * Wonderland Framework
+ *
+ * File:
+ * WN_ModuleManager.c
+ *
+ * Purpose:
+ * Controls all Wonderland modules.
+ *
+ * Version:
+ * 0.1.0
+ * -------------------------------------------------------
+ */
+
+class WN_ModuleManager
+{
+	protected ref array<ref WN_Module> m_Modules;
+
+
+	/**
+	 * Constructor
+	 */
+	void WN_ModuleManager()
+	{
+		m_Modules = new array<ref WN_Module>;
+
+		Print("[Wonderland] Module Manager Created");
+	}
+
+
+	/**
+	 * Register a module
+	 */
+	void RegisterModule(WN_Module module)
+	{
+		if (!module)
+			return;
+
+
+		m_Modules.Insert(module);
+
+
+		Print(
+			"[Wonderland] Registered Module: "
+			+ module.GetName()
+		);
+	}
+
+
+	/**
+	 * Load all modules
+	 */
+	void LoadModules()
+	{
+		foreach(WN_Module module : m_Modules)
+		{
+			if (module.IsEnabled())
+			{
+				module.OnLoad();
+			}
+		}
+	}
+
+
+	/**
+	 * Shutdown all modules
+	 */
+	void ShutdownModules()
+	{
+		foreach(WN_Module module : m_Modules)
+		{
+			if (module.IsLoaded())
+			{
+				module.OnUnload();
+			}
+		}
+	}
+
+
+	/**
+	 * Update all modules
+	 */
+	void UpdateModules(float deltaTime)
+	{
+		foreach(WN_Module module : m_Modules)
+		{
+			if (module.IsEnabled())
+			{
+				module.OnUpdate(deltaTime);
+			}
+		}
+	}
+
+
+	/**
+	 * Find module by name
+	 */
+	WN_Module GetModule(string moduleName)
+	{
+		foreach(WN_Module module : m_Modules)
+		{
+			if (module.GetName() == moduleName)
+			{
+				return module;
+			}
+		}
+
+		return null;
+	}
+
+
+	/**
+	 * Number of loaded modules
+	 */
+	int GetModuleCount()
+	{
+		return m_Modules.Count();
+	}
+}
