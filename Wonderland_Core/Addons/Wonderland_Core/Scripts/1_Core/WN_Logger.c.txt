@@ -1,0 +1,69 @@
+/**
+ * -------------------------------------------------------
+ * Project Wonderland
+ * Wonderland Framework
+ *
+ * File:
+ * WN_Logger.c
+ *
+ * Purpose:
+ * Central logging system.
+ *
+ * Version:
+ * 0.1.0
+ * -------------------------------------------------------
+ */
+
+class WN_Logger
+{
+
+	/**
+	 * Informational message
+	 */
+	static void Info(string message)
+	{
+		Print(
+			"[Wonderland][INFO] "
+			+ message
+		);
+	}
+
+
+	/**
+	 * Warning message
+	 */
+	static void Warning(string message)
+	{
+		Print(
+			"[Wonderland][WARNING] "
+			+ message
+		);
+	}
+
+
+	/**
+	 * Error message
+	 */
+	static void Error(string message)
+	{
+		Print(
+			"[Wonderland][ERROR] "
+			+ message
+		);
+	}
+
+
+	/**
+	 * Debug message
+	 *
+	 * Later this will respect
+	 * server debug settings.
+	 */
+	static void Debug(string message)
+	{
+		Print(
+			"[Wonderland][DEBUG] "
+			+ message
+		);
+	}
+}
