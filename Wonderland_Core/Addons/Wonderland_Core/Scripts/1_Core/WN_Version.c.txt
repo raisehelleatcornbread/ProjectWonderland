@@ -1,0 +1,30 @@
+/**
+ * -------------------------------------------------------
+ * Project Wonderland
+ * Wonderland Framework
+ *
+ * File:
+ * WN_Version.c
+ *
+ * Version:
+ * 0.1.0
+ *
+ * Purpose:
+ * Stores framework version information.
+ * -------------------------------------------------------
+ */
+
+class WN_Version
+{
+    static const string VERSION = "0.1.0";
+
+    static string GetVersion()
+    {
+        return VERSION;
+    }
+
+    static void PrintVersion()
+    {
+        Print("[Wonderland Framework] Version " + VERSION);
+    }
+}
