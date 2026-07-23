@@ -1,0 +1,12 @@
+name = "Project Wonderland Framework";
+picture = "";
+logo = "";
+logoSmall = "";
+logoOver = "";
+tooltip = "Project Wonderland Framework";
+tooltipOwned = "Project Wonderland Framework";
+overview = "Standalone modular framework for Project Wonderland DayZ systems.";
+action = "";
+author = "Project Wonderland";
+authorID = "";
+version = "0.1.0-alpha";

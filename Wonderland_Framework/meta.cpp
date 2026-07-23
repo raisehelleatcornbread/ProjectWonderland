@@ -1,0 +1,13 @@
+protocol = 1;
+publishedid = 0;
+name = "Project Wonderland Framework";
+timestamp = 0;
+package = "Project Wonderland";
+logo = "";
+logoSmall = "";
+logoOver = "";
+tooltip = "Project Wonderland Framework";
+overview = "Core dependency for Project Wonderland modules.";
+action = "";
+author = "Project Wonderland";
+version = "0.1.0-alpha";

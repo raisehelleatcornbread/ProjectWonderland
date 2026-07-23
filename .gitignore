@@ -1,0 +1,18 @@
+# Packaged DayZ mod output and signatures
+@Wonderland_Framework/
+*.pbo
+*.bisign
+*.bikey
+
+# DayZ Tools and Workbench generated files
+*.log
+*.bak
+*.tmp
+*.cache
+
+# Editor and Windows files
+.vs/
+.vscode/*.log
+.idea/
+Thumbs.db
+Desktop.ini
