@@ -14,22 +14,22 @@ Copy the repository's `Wonderland_Framework` folder to:
 P:\Wonderland_Framework
 ```
 
-The important source addon must be here:
+The addon configuration is at:
 
 ```text
-P:\Wonderland_Framework\Addons\Wonderland_Framework\config.cpp
+P:\Wonderland_Framework\config.cpp
 ```
 
 ## 2. Build the addon
 
 Open **DayZ Tools → Addon Builder**.
 
-- Source directory: `P:\Wonderland_Framework\Addons\Wonderland_Framework`
+- Source directory: `P:\Wonderland_Framework`
 - Destination directory: a clean temporary folder, for example `C:\DayZBuild\Wonderland_Framework\Addons`
 - Enable binarization only after the unbinarized build succeeds; Sprint 1 contains scripts and can be tested without asset binarization.
 - Build the PBO.
 
-The output should include `Wonderland_Framework.pbo` in the destination `Addons` directory.
+The output should include `Wonderland_Framework.pbo` in the destination `Addons` directory. This source folder contains both `config.cpp` and `Scripts`, so Addon Builder includes the bootstrap scripts in the PBO.
 
 ## 3. Assemble the test mod
 

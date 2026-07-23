@@ -9,3 +9,4 @@
 - Added a `Bootstrap` test module.
 - Added profile-based JSON configuration creation/loading.
 - Added DayZ Tools build instructions and a manual test checklist.
+- Corrected the Addon Builder source layout so the PBO includes framework scripts.
